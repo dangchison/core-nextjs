@@ -1,0 +1,7 @@
+{
+  "app.label.password": "Password",
+  "login.title": "Welcome to my website",
+  "login.label.username": "Username",
+  "login.btn.login": "Login",
+  "login.text.forgotPassword": "Forgot Password"
+}

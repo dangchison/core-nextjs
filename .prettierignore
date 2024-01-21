@@ -1,0 +1,27 @@
+/node_modules
+/public
+/build
+/.idea
+/.vscode
+/.next
+/out
+
+.eslintrc.json
+.gitignore
+.prettierrc
+.prettierignore
+next.config.mjs
+tsconfig.json
+
+package.json
+
+*.md
+*.yaml
+*.d.ts
+.DS_Store
+*.pem
+
+# debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*

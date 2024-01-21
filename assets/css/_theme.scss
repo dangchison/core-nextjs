@@ -1,0 +1,18 @@
+.MuiButtonBase-root,
+.MuiInputBase-input,
+.MuiFormLabel-root {
+  font-family: 'Montserrat';
+  font-weight: 400;
+}
+
+a.MuiButtonBase-root {
+  color: #fff;
+}
+
+.MuiPopover-root {
+  &.lang-menu {
+    .MuiList-root {
+      padding: 0;
+    }
+  }
+}

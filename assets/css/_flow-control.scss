@@ -1,0 +1,69 @@
+$position: (
+  'a': '',
+  'x': '',
+  'y': '',
+  'top': 't',
+  'left': 'l',
+  'bottom': 'b',
+  'right': 'r'
+);
+
+@each $name, $glyph in $position {
+  @if ($glyph == '') {
+    .m#{$name} {
+      &--0 {
+        @if ($name == 'a') {
+          margin: 0 !important;
+        } @else if($name == 'x') {
+          margin-left: 0 !important;
+          margin-right: 0 !important;
+        } @else if($name == 'y') {
+          margin-top: 0 !important;
+          margin-bottom: 0 !important;
+        }
+      }
+    }
+
+    .p#{$name} {
+      &--0 {
+        @if ($name == 'a') {
+          padding: 0 !important;
+        } @else if($name == 'x') {
+          padding-left: 0 !important;
+          padding-right: 0 !important;
+        } @else if($name == 'y') {
+          padding-top: 0 !important;
+          padding-bottom: 0 !important;
+        }
+      }
+    }
+  } @else {
+    .m#{$glyph} {
+      &--0 {
+        margin-#{$name}: 0 !important;
+      }
+    }
+
+    .p#{$glyph} {
+      &--0 {
+        padding-#{$name}: 0 !important;
+      }
+    }
+  }
+
+  @if ($glyph != '') {
+    @for $i from 1 through 30 {
+      .m#{$glyph} {
+        &--#{$i}px {
+          margin-#{$name}: #{$i}px !important;
+        }
+      }
+
+      .p#{$glyph} {
+        &--#{$i}px {
+          padding-#{$name}: #{$i}px !important;
+        }
+      }
+    }
+  }
+}
